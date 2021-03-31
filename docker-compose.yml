@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+  hmac-database:
+    container_name: hmac-database
+    image: postgres:12.1-alpine
+    ports:
+      - 5433:5432
+    restart: always
+    volumes:
+      - hmac-database:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=abadpass
+      - POSTGRES_USER=hmac
+      - POSTGRES_DB=hmac
+
+  hmac_server:
+    build:
+      context: ./hmac_server
+    command: bash
+    container_name: hmac_server
+    depends_on:
+      - hmac-database
+    env_file: ./hmac_server/.env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./hmac_server:/usr/src/app/hmac_server
+
+volumes:
+  hmac-database:
