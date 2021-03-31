@@ -1,6 +1,7 @@
 Homework Tasks:
     Virtualization:
-        ☐ Get docker-compose up running
+        ✔ Get docker-compose up running @started(21-03-30 21:02) @done(21-03-30 21:03) @lasted(2m)
+        ✔ Fix voluming @done(21-03-30 21:04)
         ☐ Start django project
         ☐ Get initial DB migrations set up
     Tasks:
@@ -20,6 +21,7 @@ Homework Tasks:
     Nice to haves:
         ☐ YASG docs
         ☐ Good Readme
+        ☐ Put on docker hub
     Pack it up:
         ☐ Drag it drop it zip unzip it
 

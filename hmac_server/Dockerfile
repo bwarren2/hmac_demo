@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 
 COPY . /usr/src/app
 
-WORKDIR /usr/src/app/hmac-server
+WORKDIR /usr/src/app/hmac_server
