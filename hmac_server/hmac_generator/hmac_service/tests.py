@@ -88,3 +88,54 @@ class HMACTestCase(TestCase):
             )
             self.assertEqual(response.status_code, test_case["status_code"])
             self.assertEqual(response.json(), "Invalid UTF8")
+
+    def test_hmac_alternative_signing(self):
+        test_cases = [
+            {
+                "url": "/api/v1/hmac/",
+                "body": "a=1",
+                "status_code": 201,
+                "digestmod_header": "sha224",
+                "response": {
+                    "a": "1",
+                    "signature": "03c65e3b648c7f8bdd0c77a77ff562313f7e729e4f7d2705ebe76d01",
+                },
+            },
+            {
+                "url": "/",
+                "body": "a=1",
+                "status_code": 201,
+                "digestmod_header": "sha224",
+                "response": {
+                    "a": "1",
+                    "signature": "03c65e3b648c7f8bdd0c77a77ff562313f7e729e4f7d2705ebe76d01",
+                },
+            },
+            {
+                "url": "/api/v1/hmac/",
+                "body": "a=1",
+                "status_code": 400,
+                "digestmod_header": "md5",
+                "response": "Invalid signing algorithm",
+            },
+            {
+                "url": "/",
+                "body": "a=1",
+                "status_code": 400,
+                "digestmod_header": "md5",
+                "response": "Invalid signing algorithm",
+            },
+        ]
+        for test_case in test_cases:
+            response = self.client.post(
+                test_case["url"],
+                test_case["body"],
+                content_type="application/x-www-form-urlencoded",
+                HTTP_X_HMAC_SIGNING=test_case["digestmod_header"],
+            )
+            self.assertEqual(response.status_code, test_case["status_code"])
+            self.assertEqual(
+                response.json(),
+                test_case["response"],
+                # test_case,
+            )

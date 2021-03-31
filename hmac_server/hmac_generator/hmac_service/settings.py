@@ -25,7 +25,7 @@ SECRET_KEY = "lb*nft!+$=z(_s0s+m5ol96u+3*ubhg(41cr$edu1i+b6d=j7^"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

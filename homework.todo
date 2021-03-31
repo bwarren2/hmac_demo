@@ -17,17 +17,17 @@ Homework Tasks:
             ✔ Call with bad utf8 @done(21-03-30 22:38)
             ✔ Call with given example @done(21-03-30 22:38)
         Create HMAC endpoint v2:
-            ☐ Make crypto parameterizable
+            ✔ Make crypto parameterizable @done(21-03-30 23:13)
 
         More tests:
-            ☐ Call with OK alternative crypto
-            ☐ Call with default crypto
-            ☐ Call with incorrect crypto
+            ✔ Call with OK alternative crypto @done(21-03-30 23:32)
+            ✔ Call with default crypto @done(21-03-30 23:13)
+            ✔ Call with incorrect crypto @done(21-03-30 23:32)
     Nice to haves:
         ☐ YASG docs
         ☐ Good Readme
         ☐ Put on docker hub
     Pack it up:
-        ☐ Get packages installed locally
+        ☐ Get packages installed locally?
         ☐ Drag it drop it zip unzip it
 

@@ -14,6 +14,15 @@ class GenerateHMAC(APIView):
 
     def post(self, request, format=None, *args, **kwargs):
         """Generate an HMAC token for a request body, and return the parsed body with the HMAC signature"""
+        signing_algorithm = request.headers.get("X-Hmac-Signing", "sha1")
+        if signing_algorithm == "sha1":
+            digestmod = hashlib.sha1
+        elif signing_algorithm == "sha224":
+            digestmod = hashlib.sha224
+        else:
+            return Response(
+                "Invalid signing algorithm", status=status.HTTP_400_BAD_REQUEST
+            )
 
         try:
             # Get the raw body given to us
@@ -25,7 +34,7 @@ class GenerateHMAC(APIView):
 
         # Make the HMAC of the raw body
         digest = hmac.new(
-            settings.SECRET_KEY.encode(), body.encode(), hashlib.sha1
+            settings.SECRET_KEY.encode(), body.encode(), digestmod
         ).hexdigest()
 
         # Update the parsed body with the digest
