@@ -5,7 +5,7 @@ services:
   hmac_server:
     build:
       context: ./hmac_server
-    command: bash
+    command: python hmac_generator/manage.py runserver 0:8080
     container_name: hmac_server
     env_file: ./hmac_server/.env
     ports:

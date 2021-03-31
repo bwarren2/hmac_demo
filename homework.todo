@@ -7,14 +7,18 @@ Homework Tasks:
         ✔ Get initial DB migrations set up @done(21-03-30 21:13)
     Tasks:
         Create HMAC endpoint v1:
-            ☐ Create serializer
-            ☐ Create CreateViewSet
-            ☐ Wire up URLs
+            ✔ Create serializer @started(21-03-30 21:21) @done(21-03-30 21:29) @lasted(8m22s)
+            ✔ Create CreateViewSet @done(21-03-30 21:29)
+            ✔ Wire up URLs @started(21-03-30 21:29) @done(21-03-30 21:39) @lasted(10m22s)
         Write some tests:
-            ☐ Call with no body
-            ☐ Call with given example
+            ✔ Call with a simple body @done(21-03-30 22:33)
+            ✔ Demonstrate stable, input=>output @done(21-03-30 22:33)
+            ✔ Call with no body @done(21-03-30 22:38)
+            ✔ Call with bad utf8 @done(21-03-30 22:38)
+            ✔ Call with given example @done(21-03-30 22:38)
         Create HMAC endpoint v2:
             ☐ Make crypto parameterizable
+
         More tests:
             ☐ Call with OK alternative crypto
             ☐ Call with default crypto
@@ -24,5 +28,6 @@ Homework Tasks:
         ☐ Good Readme
         ☐ Put on docker hub
     Pack it up:
+        ☐ Get packages installed locally
         ☐ Drag it drop it zip unzip it
 
