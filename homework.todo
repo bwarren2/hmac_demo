@@ -24,10 +24,10 @@ Homework Tasks:
             ✔ Call with default crypto @done(21-03-30 23:13)
             ✔ Call with incorrect crypto @done(21-03-30 23:32)
     Nice to haves:
-        ☐ YASG docs
-        ☐ Good Readme
-        ☐ Put on docker hub
+        ✘ YASG docs @cancelled(21-03-30 23:52)
+        ✔ Good Readme @done(21-03-30 23:52)
+        ✘ Put on docker hub @cancelled(21-03-30 23:52)
     Pack it up:
-        ☐ Get packages installed locally?
+        ✘ Get packages installed locally? @cancelled(21-03-30 23:52)
         ☐ Drag it drop it zip unzip it
 
