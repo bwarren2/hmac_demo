@@ -1,0 +1,25 @@
+Homework Tasks:
+    Virtualization:
+        ☐ Get docker-compose up running
+        ☐ Start django project
+        ☐ Get initial DB migrations set up
+    Tasks:
+        Create HMAC endpoint v1:
+            ☐ Create serializer
+            ☐ Create CreateViewSet
+            ☐ Wire up URLs
+        Write some tests:
+            ☐ Call with no body
+            ☐ Call with given example
+        Create HMAC endpoint v2:
+            ☐ Make crypto parameterizable
+        More tests:
+            ☐ Call with OK alternative crypto
+            ☐ Call with default crypto
+            ☐ Call with incorrect crypto
+    Nice to haves:
+        ☐ YASG docs
+        ☐ Good Readme
+    Pack it up:
+        ☐ Drag it drop it zip unzip it
+
